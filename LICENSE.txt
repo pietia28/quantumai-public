@@ -1,0 +1,4 @@
+QuantumAi WebSite Analyzer is free for personal and commercial use.
+Redistribution of the binary is allowed.
+Reverse engineering or decompilation is prohibited.
+The source code is proprietary and not distributed.

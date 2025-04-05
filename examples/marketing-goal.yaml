@@ -1,0 +1,16 @@
+name: Marketing Intent Detection
+description: Identify websites with marketing or promotional content.
+keywords:
+  required:
+    - offer
+    - product
+    - buy
+  optional:
+    - free trial
+    - subscribe
+    - customer reviews
+weights:
+  required: 2.5
+  optional: 1.0
+threshold: 70
+result_label: Marketing lead

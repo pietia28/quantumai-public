@@ -1,0 +1,16 @@
+name: Startup Promotion Checker
+description: Detect if a website belongs to a tech startup.
+keywords:
+  required:
+    - startup
+    - innovation
+    - pitch
+  optional:
+    - MVP
+    - seed funding
+    - early adopters
+weights:
+  required: 3.0
+  optional: 1.5
+threshold: 65
+result_label: Startup candidate
