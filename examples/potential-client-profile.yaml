@@ -1,0 +1,12 @@
+name: Potential Client Profile
+description: Analyze potential for collaboration with a Smart Home distributor
+questions:
+  - What is the main business activity?
+  - Are Smart Home or IoT systems mentioned?
+  - Does the company work with installers or distributors?
+result_fields:
+  - company_name
+  - main_activity
+  - smart_home_mention
+  - collaboration_potential
+output_format: markdown
