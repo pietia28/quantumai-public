@@ -21,7 +21,7 @@ This document describes the system requirements and compatibility for running th
 | Architecture | Status               | Notes                                                                 |
 |--------------|----------------------|-----------------------------------------------------------------------|
 | x86_64       | ✅ Supported          | Standard 64-bit systems                                               |
-| ARM64        | ⚠️ Partially supported | Requires manually building `.exe` with PyInstaller for ARM64 targets |
+| ARM64        | ❌ Not supported      | Yet |
 | x86 (32-bit) | ❌ Not supported      | Only 64-bit systems are supported                                     |
 
 ---
