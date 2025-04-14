@@ -12,7 +12,7 @@ You can install the application in two ways:
 
 ### 🔹 1. Using the Windows Installer (recommended)
 
-1. Download the `quantumai-cli-setup-<version>.exe` from [GitHub Releases](https://github.com/your-user/quantumai-public/releases)
+1. Download the `quantumai-cli-setup-<version>.exe` from [GitHub Releases](https://github.com/pietia28/quantumai-public/releases)
 2. Run the installer. It will:
    - Install the app into `Program Files\QuantumAI-CLI`
    - Add it to your system PATH
@@ -88,4 +88,4 @@ See [`YAML_TASK_GUIDE.md`](./YAML_TASK_GUIDE.md) for a complete reference.
 ## 🐞 Reporting Issues
 
 If something doesn't work, or you'd like to suggest a feature:
-👉 [Create an issue on GitHub](https://github.com/your-user/quantumai-public/issues)
+👉 [Create an issue on GitHub](https://github.com/pietia28/quantumai-public/issues)
