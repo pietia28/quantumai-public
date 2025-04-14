@@ -20,6 +20,6 @@ All notable changes to this project will be documented in this file.
 
 ### Known Issues
 - Some features may be unstable (alpha release)
-- ARM builds require manual `.exe` compilation
+- ARM architecture is not supported
 
 ---
