@@ -1,4 +1,24 @@
-QuantumAi WebSite Analyzer is free for personal and commercial use.
-Redistribution of the binary is allowed.
-Reverse engineering or decompilation is prohibited.
-The source code is proprietary and not distributed.
+Quantum Analyzer CLI – License Agreement
+
+Version: 0.0.1-alpha
+Copyright (c) 2024 Piotr Głowacki
+
+This software is provided free of charge for personal, commercial, and educational use.
+
+Redistribution of the software in its original, unmodified form is permitted.
+You are NOT permitted to:
+- Modify, reverse-engineer, or decompile this software,
+- Reuse, copy, or incorporate any parts of its code into other software,
+- Distribute altered or modified versions of this software.
+
+This application is an early, experimental release (alpha version).
+As such, it may contain bugs or behave unexpectedly.
+By using this software, you acknowledge that:
+- It is provided "as-is" without any warranties,
+- The author shall not be held liable for any damages, losses, or malfunctions
+  resulting from the use of this application.
+
+By continuing to use this software, you agree to all terms above.
+
+For inquiries or commercial agreements, please contact:
+pege28@wp.pl
