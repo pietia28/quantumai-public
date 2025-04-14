@@ -1,18 +1,67 @@
-# Community Contributions
+# 🤝 Community Contributions
 
-Welcome to the QuantumAi community contribution folder!
+Welcome to the **QuantumAI Community Zone**!  
+Here, you can **share your own analysis tasks and training data** to inspire others and help expand the capabilities of QuantumAI CLI.
 
-You can share your YAML analysis goals or training data here to help others and improve the AI engine.
+---
 
-## What to contribute:
-- YAML configuration files that define custom website analysis goals.
-- AI training data samples in JSON or CSV format.
+## 🧠 What You Can Contribute
 
-## Where to put them:
-Place your files in the `contributed/` directory and name them clearly.
+You are encouraged to submit:
 
-## How to submit:
-- Open a **Pull Request** with your contribution, or
-- Submit your files via a **GitHub Issue**.
+- 🧾 **Custom YAML tasks** that define new analysis goals  
+- 📊 **Sample training data** (`.csv`) used to train local ML models  
+- 🌍 **Localized tasks** in other languages (e.g., `pl/`, `en/`, `de/`)
 
-Make sure your files follow the format in the documentation.
+---
+
+## 📁 Folder Structure (Please Follow)
+
+Each contribution should be organized similarly to `examples/`:
+
+```
+community/
+└── <language_code>/
+    └── <your_task_name>/
+        ├── README.md               # Short explanation (in task language)
+        ├── tasks/
+        │   └── your_task.yaml
+        └── data/
+            └── your_dataset.csv
+```
+
+✅ This helps others use your task immediately by copying into their working `tasks/` and `data/` directories.
+
+---
+
+## 🚀 How to Submit
+
+You can submit your contribution in two ways:
+
+1. 📦 **Pull Request**  
+   Fork the repository and create a PR with your files in the `community/` directory.
+
+2. 📨 **GitHub Issue**  
+   Open an issue and attach or link to your files (we'll help you integrate them).
+
+---
+
+## 📌 Tips
+
+- Use clear names and folder structure
+- Add a `README.md` inside your task folder describing:
+  - The goal of the analysis
+  - Expected labels (if classification)
+  - Any special considerations
+
+---
+
+## 📚 Need Help?
+
+See [`examples/`](../examples/) or read the  
+📘 [YAML Task Guide](../docs/YAML_TASK_GUIDE.md) and  
+🛠️ [YAML Tutorial](../docs/YAML_TUTORIAL.md)
+
+---
+
+Together we can build a powerful, flexible library of website understanding tools! 🌐🤖
