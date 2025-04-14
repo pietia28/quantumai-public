@@ -21,13 +21,15 @@ Each contribution should be organized similarly to `examples/`:
 
 ```
 community/
-└── <language_code>/
-    └── <your_task_name>/
-        ├── README.md               # Short explanation (in task language)
-        ├── tasks/
-        │   └── your_task.yaml
-        └── data/
-            └── your_dataset.csv
+└── contributed/
+    └── <language_code>/           # e.g. en, pl, de
+        └── <your_task_name>/      # e.g. sentiment_analysis, smart_home_check
+            ├── README.md          # Short explanation (in the same language)
+            ├── tasks/
+            │   └── your_task.yaml # Task definition
+            └── data/
+                └── your_dataset.csv  # Training data (CSV format)
+
 ```
 
 ✅ This helps others use your task immediately by copying into their working `tasks/` and `data/` directories.
