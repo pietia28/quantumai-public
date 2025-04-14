@@ -45,4 +45,4 @@ This document describes the system requirements and compatibility for running th
 ---
 
 For feedback or bug reports, please use GitHub Issues:  
-👉 [https://github.com/your-user/quantumai-public/issues](https://github.com/your-user/quantumai-public/issues)
+👉 [https://github.com/pietia28/quantumai-public/issues](https://github.com/pietia28/quantumai-public/issues)
