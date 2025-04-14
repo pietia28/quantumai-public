@@ -22,7 +22,7 @@ It supports both OpenAI API and local machine learning models (trained just-in-t
 
 ## 🛠 Installation (Windows)
 
-Download the latest installer from [Releases](https://github.com/yourname/quantumai-public/releases) and run:
+Download the latest installer from [Releases](https://github.com/pietia28/quantumai-public/releases) and run:
 
 ```bash
 quant analyze --url https://example.com --task tasks/your_task.yaml
