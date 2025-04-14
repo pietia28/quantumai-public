@@ -1,24 +1,20 @@
-task_name: b2b_or_b2c
-input_column: content
-output_column: label
-model: LogisticRegression
-vectorizer: tfidf
 data_file: data/b2b_or_b2c.csv
+description: Classify if a company is B2B or B2C
+input_column: content
+model: LogisticRegression
+output_column: label
+output_format:
+- field: url
+  from: page.url
+- field: segment
+  from: prediction
+- field: score
+  from: probability
+report_template: '### {url}
 
-raw_fields:
-  page.url: url
-  prediction: prediction
-  probability: score
-  keywords: keywords
+  - **Segment**: {segment}
 
-template_vars:
-  url: url
-  Label: prediction
-  Score: score
-  Keywords: keywords
-
-report_template: |
-  ### {url}
-  - **Label**: {Label}
-  - **Score**: {Score:.1f}%
-  - **Keywords**: {Keywords}
+  - **Score**: {score:.2f}%'
+task_name: b2b_or_b2c
+type: classification
+vectorizer: tfidf
