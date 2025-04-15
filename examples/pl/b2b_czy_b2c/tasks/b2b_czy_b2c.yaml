@@ -1,20 +1,29 @@
-data_file: data/b2b_or_b2c.csv
+task_name: b2b_czy_b2c
 description: 'Klasyfikacja: sprzedaż B2B czy B2C'
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: segment
-  from: prediction
-- field: pewnosc
-  from: probability
-report_template: '### {url}
-
-  - **Segment**: {segment}
-
-  - **Pewność**: {pewnosc:.2f}%'
-task_name: b2b_or_b2c
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/b2b_czy_b2c.csv
+
+raw_fields:
+  page.url: url
+  prediction: segment
+  probability: pewnosc
+  keywords: slowa
+
+template_vars:
+  url: url
+  segment: segment
+  pewnosc: pewnosc
+  slowa: slowa
+
+report_template: |
+  ### {url}
+  - **Segment**: {segment}
+  - **Pewność**: {pewnosc:.2f}%
+  - **Słowa kluczowe**: {slowa}

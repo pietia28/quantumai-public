@@ -1,20 +1,29 @@
-data_file: data/potential_client.csv
+task_name: potencjalny_klient
 description: Czy firma to potencjalny klient?
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: czy_klient
-  from: prediction
-- field: pewnosc
-  from: probability
-report_template: '### {url}
-
-  - **Czy to klient?**: {czy_klient}
-
-  - **Pewność**: {pewnosc:.2f}%'
-task_name: potential_client
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/potencjalny_klient.csv
+
+raw_fields:
+  page.url: url
+  prediction: czy_klient
+  probability: pewnosc
+  keywords: slowa
+
+template_vars:
+  url: url
+  czy_klient: czy_klient
+  pewnosc: pewnosc
+  slowa: slowa
+
+report_template: |
+  ### {url}
+  - **Czy to klient?**: {czy_klient}
+  - **Pewność**: {pewnosc:.2f}%
+  - **Słowa kluczowe**: {slowa}

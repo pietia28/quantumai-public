@@ -1,20 +1,29 @@
-data_file: data/smart_home_check.csv
+task_name: smart_home
 description: Czy firma działa w sektorze smart home / IoT?
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: czy_smart_home
-  from: prediction
-- field: pewnosc
-  from: probability
-report_template: '### {url}
-
-  - **Czy smart home / IoT?**: {czy_smart_home}
-
-  - **Pewność**: {pewnosc:.2f}%'
-task_name: smart_home_check
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/smart_home.csv
+
+raw_fields:
+  page.url: url
+  prediction: czy_smart_home
+  probability: pewnosc
+  keywords: slowa
+
+template_vars:
+  url: url
+  czy_smart_home: czy_smart_home
+  pewnosc: pewnosc
+  slowa: slowa
+
+report_template: |
+  ### {url}
+  - **Czy smart home / IoT?**: {czy_smart_home}
+  - **Pewność**: {pewnosc:.2f}%
+  - **Słowa kluczowe**: {slowa}
