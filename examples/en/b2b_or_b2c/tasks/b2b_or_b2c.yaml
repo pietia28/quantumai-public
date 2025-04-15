@@ -1,20 +1,29 @@
-data_file: data/b2b_or_b2c.csv
-description: Classify if a company is B2B or B2C
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: segment
-  from: prediction
-- field: score
-  from: probability
-report_template: '### {url}
-
-  - **Segment**: {segment}
-
-  - **Score**: {score:.2f}%'
 task_name: b2b_or_b2c
+description: Classify the company's target sales channel (e.g. B2B, B2C, distributors, installers)
 type: classification
+
+input_column: content
+output_column: channel
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/b2b_or_b2c.csv
+
+raw_fields:
+  page.url: url
+  prediction: customer_type
+  probability: confidence
+  keywords: keywords
+
+template_vars:
+  url: url
+  type: customer_type
+  confidence: confidence
+  keywords: keywords
+
+report_template: |
+  ### {url}
+  - **Customer Type**: {type}
+  - **Classification Confidence**: {confidence:.1f}%
+  - **Important Keywords**: {keywords}

@@ -1,20 +1,29 @@
-data_file: data/smart_home_check.csv
-description: Detect if a company operates in smart home / IoT sector
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: in_smart_home
-  from: prediction
-- field: certainty
-  from: probability
-report_template: '### {url}
-
-  - **Smart Home Related?**: {in_smart_home}
-
-  - **Certainty**: {certainty:.2f}%'
 task_name: smart_home_check
+description: Detect if a company operates in smart home / IoT sector
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/smart_home_check.csv
+
+raw_fields:
+  page.url: url
+  prediction: in_smart_home
+  probability: certainty
+  keywords: keywords
+
+template_vars:
+  url: url
+  in_smart_home: in_smart_home
+  certainty: certainty
+  keywords: keywords
+
+report_template: |
+  ### {url}
+  - **Smart Home Related?**: {in_smart_home}
+  - **Certainty**: {certainty:.2f}%
+  - **Top Keywords**: {keywords}

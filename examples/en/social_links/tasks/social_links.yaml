@@ -1,20 +1,29 @@
-data_file: data/social_links.csv
-description: Detect if a page has links to social media
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: social_media_links
-  from: prediction
-- field: confidence
-  from: probability
-report_template: '### {url}
-
-  - **Social Media Links?**: {social_media_links}
-
-  - **Confidence**: {confidence:.2f}%'
 task_name: social_links
+description: Detect if a page has links to social media
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/social_links.csv
+
+raw_fields:
+  page.url: url
+  prediction: social_links
+  probability: confidence
+  keywords: keywords
+
+template_vars:
+  url: url
+  social_links: social_links
+  confidence: confidence
+  keywords: keywords
+
+report_template: |
+  ### {url}
+  - **Has Social Media Links?**: {social_links}
+  - **Confidence**: {confidence:.2f}%
+  - **Top Keywords**: {keywords}

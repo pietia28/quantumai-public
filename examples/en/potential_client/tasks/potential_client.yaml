@@ -1,20 +1,30 @@
-data_file: data/potential_client.csv
-description: Predict if a company is a potential client
-input_column: content
-model: LogisticRegression
-output_column: label
-output_format:
-- field: url
-  from: page.url
-- field: prediction
-  from: prediction
-- field: confidence
-  from: probability
-report_template: '### {url}
-
-  - **Prediction**: {prediction}
-
-  - **Confidence**: {confidence:.2f}%'
 task_name: potential_client
+description: Predict if a company is a potential client
 type: classification
+
+input_column: content
+output_column: label
+
+model: LogisticRegression
 vectorizer: tfidf
+
+data_file: data/potential_client.csv
+
+raw_fields:
+  page.url: url
+  prediction: prediction
+  probability: confidence
+  keywords: keywords
+
+template_vars:
+  url: url
+  prediction: prediction
+  confidence: confidence
+  keywords: keywords
+
+report_template: |
+  ### {url}
+  - **Prediction**: {prediction}
+  - **Confidence**: {confidence:.2f}%
+  - **Top Keywords**: {keywords}
+
