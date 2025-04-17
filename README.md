@@ -1,9 +1,29 @@
+# QuantumAI CLI – Public Repository
+
+This repository contains:
+
+- 📦 Public binary releases of the **QuantumAI CLI** tool
+- 🧠 Example tasks for AI-based website analysis
+- 📜 Documentation and release history
+- 🛠 Installer script for Windows
+
+> ⚠️ **Note:** This repository does not include the source code for QuantumAI CLI.
+
+## 📥 Download the Latest Version
+
+| Version       | Release Date | Download |
+|---------------|--------------|----------|
+| 0.0.2-alpha   | 2025-04-17   | [Releases](https://github.com/pietia28/quantumai-public/releases)
+| 0.0.1-alpha   | 2025-03-01   | [Releases](https://github.com/pietia28/quantumai-public/releases)
+
+---
+
 # QuantumAI CLI
 
 QuantumAI CLI is a command-line tool that uses AI to analyze website content based on custom tasks.
 It supports both OpenAI API and local machine learning models (trained just-in-time using YAML task definitions and training data).
 
-> Current version: **0.0.1-alpha**
+> Current version: **0.0.2-alpha**
 
 ---
 

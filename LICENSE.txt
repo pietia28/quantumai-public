@@ -1,8 +1,5 @@
 Quantum Analyzer CLI – License Agreement
 
-Version: 0.0.1-alpha
-Copyright (c) 2024 Piotr Głowacki
-
 This software is provided free of charge for personal, commercial, and educational use.
 
 Redistribution of the software in its original, unmodified form is permitted.
@@ -19,6 +16,16 @@ By using this software, you acknowledge that:
   resulting from the use of this application.
 
 By continuing to use this software, you agree to all terms above.
+
+MIT License (for `tasks/` and `data/` folders):
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the task and data files to deal in them without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute,
+and sublicense, subject to the following condition:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the files.
 
 For inquiries or commercial agreements, please contact:
 pege28@wp.pl
