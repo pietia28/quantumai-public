@@ -13,8 +13,8 @@ This repository contains:
 
 | Version       | Release Date | Download |
 |---------------|--------------|----------|
-| 0.0.2-alpha   | 2025-04-17   | [Releases](https://github.com/pietia28/quantumai-public/releases)
-| 0.0.1-alpha   | 2025-03-01   | [Releases](https://github.com/pietia28/quantumai-public/releases)
+| 0.0.2-alpha   | 2025-04-17   | [Download](https://github.com/pietia28/quantumai-public/releases/tag/0.0.2-alpha)
+| 0.0.1-alpha   | 2025-04-10   | [Download](https://github.com/pietia28/quantumai-public/releases/tag/0.0.1-alpha)
 
 ---
 
